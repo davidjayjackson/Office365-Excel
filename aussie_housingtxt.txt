@@ -1,0 +1,16 @@
+Excel,power query,housing prices,data cleaning,data wrangling,Aussie Land
+
+218m²
+building = 225
+land = 563
+price =517560
+Auss to dollars = Australian Dollar * 0.77 = US Dollar
+
+Size conversion 10.76
+
+= IF(
+      ISBLANK(RealEstate[land_size]),
+      AVERAGE(RealEstate[land_size]),
+        RealEstate[land_size]
+)
+Text.Remove([price],{"$","a".."z","A".."Z"})
